@@ -5,16 +5,17 @@ import java.io.OutputStream;
 import java.io.Writer;
 import java.text.MessageFormat;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.PropertyException;
-import javax.xml.bind.ValidationEventHandler;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
-import javax.xml.bind.attachment.AttachmentMarshaller;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamWriter;
 import javax.xml.transform.Result;
 import javax.xml.validation.Schema;
+
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.PropertyException;
+import jakarta.xml.bind.ValidationEventHandler;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.attachment.AttachmentMarshaller;
 
 import org.locationtech.jts.geom.Geometry;
 import org.w3c.dom.Node;
@@ -23,20 +24,20 @@ import org.xml.sax.ContentHandler;
 import net.opengis.gml.v_3_1_1.AbstractGeometryType;
 import net.opengis.gml.v_3_1_1.GeometryPropertyType;
 
-public class MarshallerImpl implements javax.xml.bind.Marshaller {
+public class MarshallerImpl implements jakarta.xml.bind.Marshaller {
 
-  private final javax.xml.bind.Marshaller marshaller;
+  private final jakarta.xml.bind.Marshaller marshaller;
   private final JTSToGML311ConverterInterface<AbstractGeometryType, GeometryPropertyType, Geometry> converter;
 
   public MarshallerImpl(
-      javax.xml.bind.Marshaller marshaller,
+      jakarta.xml.bind.Marshaller marshaller,
       JTSToGML311ConverterInterface<AbstractGeometryType, GeometryPropertyType, Geometry> converter) {
     super();
     this.marshaller = marshaller;
     this.converter = converter;
   }
 
-  public javax.xml.bind.Marshaller getMarshaller() {
+  public jakarta.xml.bind.Marshaller getMarshaller() {
     return marshaller;
   }
 

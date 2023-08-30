@@ -1,9 +1,10 @@
 package org.jvnet.ogc.gml.v_3_1_1;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlElementDecl;
-import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
+
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.annotation.XmlElementDecl;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 import net.opengis.gml.v_3_1_1.AbstractGeometryType;
 import net.opengis.gml.v_3_1_1.AbstractRingPropertyType;

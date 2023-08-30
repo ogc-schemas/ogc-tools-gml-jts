@@ -3,7 +3,7 @@ package org.jvnet.ogc.gml.v_3_1_1.jts;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBElement;
 
 import org.jvnet.jaxb2_commons.locator.ObjectLocator;
 import org.locationtech.jts.geom.Geometry;

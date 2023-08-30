@@ -1,6 +1,6 @@
 package org.jvnet.ogc.gml.v_3_1_1;
 
-import javax.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBElement;
 
 import net.opengis.gml.v_3_1_1.AbstractGeometryType;
 import net.opengis.gml.v_3_1_1.AbstractRingPropertyType;

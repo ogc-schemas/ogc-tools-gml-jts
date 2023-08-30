@@ -1,9 +1,9 @@
 package org.jvnet.ogc.gml.v_3_1_1.jts;
 
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.Validator;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
+import jakarta.xml.bind.Unmarshaller;
+import jakarta.xml.bind.Validator;
 
 import org.locationtech.jts.geom.Geometry;
 
@@ -11,14 +11,14 @@ import net.opengis.gml.v_3_1_1.AbstractGeometryType;
 import net.opengis.gml.v_3_1_1.GeometryPropertyType;
 
 @SuppressWarnings("deprecation")
-public class JAXBContextImpl extends javax.xml.bind.JAXBContext {
+public class JAXBContextImpl extends jakarta.xml.bind.JAXBContext {
 
-  private final javax.xml.bind.JAXBContext context;
+  private final jakarta.xml.bind.JAXBContext context;
   private final JTSToGML311ConverterInterface<AbstractGeometryType, GeometryPropertyType, Geometry> marshallerConverter;
   private final GML311ToJTSConverterInterface<AbstractGeometryType, Object, Geometry> unmarshallerConverter;
 
   public JAXBContextImpl(
-      javax.xml.bind.JAXBContext context,
+      jakarta.xml.bind.JAXBContext context,
       JTSToGML311ConverterInterface<AbstractGeometryType, GeometryPropertyType, Geometry> marshallerConverter,
       GML311ToJTSConverterInterface<AbstractGeometryType, Object, Geometry> unmarshallerConverter) {
     super();

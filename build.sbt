@@ -13,9 +13,12 @@ lazy val root = (project in file("."))
     // Running the tests requires removing the setting.
     // It can also be changed to point to a different Java version.
     //javaHome             := Some(file("/home/soc/apps/zulu8.33.0.1-jdk8.0.192-linux_x64/")),
-    libraryDependencies  += "jakarta.xml.bind"        % "jakarta.xml.bind-api" % "2.3.3",
-    libraryDependencies  += "org.ogc-schemas"         % "gml-v_3_1_1"          % "3.0.0",
-    libraryDependencies  += "org.locationtech.jts"    % "jts-core"             % "1.18.0",
+    libraryDependencies  += "jakarta.xml.bind"     % "jakarta.xml.bind-api" % "3.0.1",
+    libraryDependencies  += "org.ogc-schemas"      % "gml-v_3_1_1"          % "5.0.0",
+    libraryDependencies  += "org.locationtech.jts" % "jts-core"             % "1.19.0",
+    // Only required for `GML311ToJTSCoordinateConverter` which uses `org.jvnet.jaxb2_commons.locator.ObjectLocator`
+    // which extends `javax.xml.bind.ValidationEventLocator`. A new release of `jaxb2_commons` should fix this.
+    libraryDependencies  += "javax.xml.bind"       % "jaxb-api"             % "2.3.1",
     Test / testOptions   := Seq(Tests.Argument(TestFrameworks.JUnit, "-a")),
     publish / skip       := true,
     publishTo            := {

@@ -6,18 +6,19 @@ import java.io.Reader;
 import java.net.URL;
 import java.text.MessageFormat;
 
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.JAXBIntrospector;
-import javax.xml.bind.PropertyException;
-import javax.xml.bind.UnmarshallerHandler;
-import javax.xml.bind.ValidationEventHandler;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
-import javax.xml.bind.attachment.AttachmentUnmarshaller;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLStreamReader;
 import javax.xml.transform.Source;
 import javax.xml.validation.Schema;
+
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.JAXBIntrospector;
+import jakarta.xml.bind.PropertyException;
+import jakarta.xml.bind.UnmarshallerHandler;
+import jakarta.xml.bind.ValidationEventHandler;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.attachment.AttachmentUnmarshaller;
 
 import org.jvnet.jaxb2_commons.locator.DefaultRootObjectLocator;
 import org.locationtech.jts.geom.Geometry;
@@ -26,19 +27,19 @@ import org.xml.sax.InputSource;
 
 import net.opengis.gml.v_3_1_1.AbstractGeometryType;
 
-public class UnmarshallerImpl implements javax.xml.bind.Unmarshaller {
+public class UnmarshallerImpl implements jakarta.xml.bind.Unmarshaller {
 
-  private final javax.xml.bind.Unmarshaller unmarshaller;
+  private final jakarta.xml.bind.Unmarshaller unmarshaller;
   private final GML311ToJTSConverterInterface<AbstractGeometryType, Object, Geometry> converter;
 
   public UnmarshallerImpl(
-      javax.xml.bind.Unmarshaller unmarshaller,
+      jakarta.xml.bind.Unmarshaller unmarshaller,
       GML311ToJTSConverterInterface<AbstractGeometryType, Object, Geometry> converter) {
     this.unmarshaller = unmarshaller;
     this.converter = converter;
   }
 
-  public javax.xml.bind.Unmarshaller getUnmarshaller() {
+  public jakarta.xml.bind.Unmarshaller getUnmarshaller() {
     return unmarshaller;
   }
 

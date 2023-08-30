@@ -2,7 +2,7 @@ package org.jvnet.ogc.gml.v_3_1_1.jts;
 
 import java.lang.reflect.Method;
 
-import javax.xml.bind.JAXBElement;
+import jakarta.xml.bind.JAXBElement;
 
 import org.jvnet.ogc.gml.v_3_1_1.ObjectFactoryInterface;
 import org.locationtech.jts.geom.LinearRing;
