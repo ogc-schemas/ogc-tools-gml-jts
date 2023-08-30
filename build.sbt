@@ -5,6 +5,7 @@ lazy val root = (project in file("."))
     managedScalaInstance := false,
     crossPaths           := false,
     version              := "3.0.1",
+    versionScheme        := Some("semver-spec"),
     homepage             := Some(url("https://github.com/ogc-schemas/ogc-tools-gml-jts")),
     licenses             := Seq("BSD" -> url("https://directory.fsf.org/wiki/License:BSD-2-Clause")),
     fork                 := true,
@@ -15,15 +16,14 @@ lazy val root = (project in file("."))
     libraryDependencies  += "jakarta.xml.bind"        % "jakarta.xml.bind-api" % "2.3.3",
     libraryDependencies  += "org.ogc-schemas"         % "gml-v_3_1_1"          % "3.0.0",
     libraryDependencies  += "org.locationtech.jts"    % "jts-core"             % "1.18.0",
-    testOptions in Test  := Seq(Tests.Argument(TestFrameworks.JUnit, "-a")),
-    /*
+    Test / testOptions   := Seq(Tests.Argument(TestFrameworks.JUnit, "-a")),
+    publish / skip       := true,
     publishTo            := {
       val nexus = "https://oss.sonatype.org/"
       if (isSnapshot.value) Some("snapshots" at nexus + "content/repositories/snapshots")
       else Some("releases" at nexus + "service/local/staging/deploy/maven2")
     },
-    */
-    packageOptions in (Compile, packageBin) += {
+    Compile / packageBin / packageOptions += {
       import java.util.jar.{Attributes, Manifest}
       val manifest = new Manifest
       manifest.getMainAttributes.put(new Attributes.Name("Automatic-Module-Name"), "ogc.tools.gml.jts")
