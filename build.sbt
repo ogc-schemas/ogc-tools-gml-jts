@@ -12,7 +12,7 @@ lazy val root = (project in file("."))
     // The javaHome setting can be removed if building against the latest installed version of Java is acceptable.
     // Running the tests requires removing the setting.
     // It can also be changed to point to a different Java version.
-    //javaHome             := Some(file("/home/soc/apps/zulu8.33.0.1-jdk8.0.192-linux_x64/")),
+    javaHome             := Some(file("/usr/lib/jvm/java-11-openjdk-amd64/")),
     libraryDependencies  += "jakarta.xml.bind"     % "jakarta.xml.bind-api" % "3.0.1",
     libraryDependencies  += "org.ogc-schemas"      % "gml-v_3_1_1"          % "5.0.0",
     libraryDependencies  += "org.locationtech.jts" % "jts-core"             % "1.19.0",
