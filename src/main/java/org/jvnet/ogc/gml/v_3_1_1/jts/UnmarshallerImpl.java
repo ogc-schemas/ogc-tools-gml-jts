@@ -20,7 +20,7 @@ import jakarta.xml.bind.ValidationEventHandler;
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 import jakarta.xml.bind.attachment.AttachmentUnmarshaller;
 
-import org.jvnet.jaxb2_commons.locator.DefaultRootObjectLocator;
+import org.jvnet.jaxb.locator.DefaultRootObjectLocator;
 import org.locationtech.jts.geom.Geometry;
 import org.w3c.dom.Node;
 import org.xml.sax.InputSource;

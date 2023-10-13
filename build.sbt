@@ -14,11 +14,8 @@ lazy val root = (project in file("."))
     // It can also be changed to point to a different Java version.
     javaHome             := Some(file("/usr/lib/jvm/java-11-openjdk-amd64/")),
     libraryDependencies  += "jakarta.xml.bind"     % "jakarta.xml.bind-api" % "3.0.1",
-    libraryDependencies  += "org.ogc-schemas"      % "gml-v_3_1_1"          % "5.0.0",
+    libraryDependencies  += "org.ogc-schemas"      % "gml-v_3_1_1"          % "5.0.1",
     libraryDependencies  += "org.locationtech.jts" % "jts-core"             % "1.19.0",
-    // Only required for `GML311ToJTSCoordinateConverter` which uses `org.jvnet.jaxb2_commons.locator.ObjectLocator`
-    // which extends `javax.xml.bind.ValidationEventLocator`. A new release of `jaxb2_commons` should fix this.
-    libraryDependencies  += "javax.xml.bind"       % "jaxb-api"             % "2.3.1",
     Test / testOptions   := Seq(Tests.Argument(TestFrameworks.JUnit, "-a")),
     publish / skip       := true,
     publishTo            := {

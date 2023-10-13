@@ -5,8 +5,8 @@ import java.util.List;
 
 import jakarta.xml.bind.JAXBElement;
 
-import org.jvnet.jaxb2_commons.locator.ItemObjectLocator;
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.ItemObjectLocator;
+import org.jvnet.jaxb.locator.ObjectLocator;
 import org.locationtech.jts.geom.Coordinate;
 import org.locationtech.jts.geom.GeometryFactory;
 import org.locationtech.jts.geom.LineString;

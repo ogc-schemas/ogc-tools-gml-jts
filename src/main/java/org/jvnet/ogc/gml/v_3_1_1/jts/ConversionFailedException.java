@@ -1,6 +1,6 @@
 package org.jvnet.ogc.gml.v_3_1_1.jts;
 
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.ObjectLocator;
 
 public class ConversionFailedException extends Exception {
 

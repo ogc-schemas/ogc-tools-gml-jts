@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import org.jvnet.jaxb2_commons.locator.ObjectLocator;
+import org.jvnet.jaxb.locator.ObjectLocator;
 import org.locationtech.jts.geom.Coordinate;
 
 import net.opengis.gml.v_3_1_1.CoordType;
